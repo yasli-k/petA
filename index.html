@@ -53,6 +53,14 @@
             </div>
             <div id="pages" v-if="page === 2">
                 <h2>Applicants for Review</h2>
+                <div id="ppllist" v-for="p in ppl">
+                    <div> {{p.name}} </div>
+                    <div> {{p.phone}} </div>
+                    <div> {{p.email}} </div>
+                    <div> {{p.petId}} </div>
+                </div>
+                <h2>Apply Now!</h2>
+                
 
             </div>
         </div>

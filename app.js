@@ -4,7 +4,7 @@ Vue.createApp({
     data() {
         return {
             pets: [],
-            applications: [],
+            ppl: [],
             page: 1,
             newPet: {
                 name: "",
@@ -25,15 +25,14 @@ Vue.createApp({
             console.log(data);
         },
 
-        /*
         //get a list of all pending pet adoption applications
         getApplications: async function() {
             let response = await fetch(`${URL}/applications`);
             let data = await response.json();
-            this.applications = data;
+            this.ppl = data;
             console.log(data);
         },
-        */
+
 
         //post a new pet listing
         addPet: async function() {
@@ -77,21 +76,21 @@ Vue.createApp({
             this.applications.push(data);
         },
         */
-/*
+       /*
         deleteListing: async function (index) {
             let requestOptions = {
                 method: "DELETE",
             };
 
-            let expId = this.expenses[index]._id;
-            let response = await fetch(`${URL}/expenses/${expId}`, requestOptions);
+            let petId = this.pets[index]._id;
+            let response = await fetch(`${URL}/pets/${Id}`, requestOptions);
             if(response.status == 204) {
                 this.expenses.splice(index, 1);
             } else {
                 alert("Failed to Delete Expense.");
             }
         },
-*/
+        */
         changePage: function(pageNum) {
             this.page = pageNum;
         },
@@ -118,6 +117,6 @@ Vue.createApp({
     created: function() {
         console.log("app created");
         this.getPets();
-        //this.getApplications();
+        this.getApplications();
     }
 }).mount("#app");
