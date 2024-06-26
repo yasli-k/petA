@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width-device-width", initial-scale="1.0"> 
+        <link rel="stylesheet" href="style.css"> 
+        <title>Pet Adoption</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <div id="pages" v-if="page === 1">
+                <button @click="changePage(2)">View Applications</button>
+                <div id="topbar">
+
+                </div>
+            </div>
+            <div id="pages" v-if="page === 2">
+                <button @click="changePage(1)">View Pets</button>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
