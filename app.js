@@ -26,6 +26,7 @@ Vue.createApp({
             console.log(data);
         },
 
+        /*
         //post a new pet listing
         addListing: async function() {
             const formData = new FormData();
@@ -59,7 +60,7 @@ Vue.createApp({
             const data = await response.json();
             this.applications.push(data);
         },
-
+        */
 /*
         deleteListing: async function (index) {
             let requestOptions = {
@@ -98,5 +99,7 @@ Vue.createApp({
     },
     created: function() {
         console.log("app created");
+        //this.getListings();
+        //this.getApplications();
     }
 }).mount("#app");
