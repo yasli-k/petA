@@ -19,9 +19,37 @@
             </div>
             <div id="pages" v-if="page === 1">
                 <h2>Pets for Adoption</h2>
-                <div id="topbar">
-
+                <div id="petlist" v-for="pet in pets">
+                    <div> {{pet.name}} </div>
+                    <div> {{pet.species}} </div>
+                    <div> {{pet.breed}} </div>
+                    <div> {{pet.age}} </div>
+                    <div> {{pet.gender}} </div>
                 </div>
+                <h2>Add a New Pet Listing</h2>
+                <form class="add-form" @submit.prevent="addPet()">
+                    <label class="label-input">
+                        <span>Name</span>
+                        <input type="text" class="form-input" v-model="newPet.name"/>
+                    </label>
+                    <label class="label-input">
+                        <span>Species</span>
+                        <input type="text" class="form-input" v-model="newPet.species"/>
+                    </label>
+                    <label class="label-input">
+                        <span>Breed</span>
+                        <input type="text" class="form-input" v-model="newPet.breed"/>
+                    </label>
+                    <label class="label-input">
+                        <span>Age</span>
+                        <input type="number" class="form-input" v-model="newPet.age">
+                    </label>
+                    <label class="label-input">
+                        <span>Gender</span>
+                        <input type="text" class="form-input" v-model="newPet.gender">
+                    </label>
+                    <button>Add New</button>
+                </form>
             </div>
             <div id="pages" v-if="page === 2">
                 <h2>Applicants for Review</h2>
