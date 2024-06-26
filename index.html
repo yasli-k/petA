@@ -10,14 +10,22 @@
 
     <body>
         <div id="app">
+            <div id=header>
+                <h1>Forever Friends Adoption Center</h1>
+                <nav>
+                    <button @click="changePage(1)">View Pets</button>
+                    <button @click="changePage(2)">View Applications</button>
+                </nav>
+            </div>
             <div id="pages" v-if="page === 1">
-                <button @click="changePage(2)">View Applications</button>
+                <h2>Pets for Adoption</h2>
                 <div id="topbar">
 
                 </div>
             </div>
             <div id="pages" v-if="page === 2">
-                <button @click="changePage(1)">View Pets</button>
+                <h2>Applicants for Review</h2>
+
             </div>
         </div>
         <script src="app.js"></script>
